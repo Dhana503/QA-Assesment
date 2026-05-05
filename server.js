@@ -52,7 +52,7 @@ app.get('/health', (req, res) => {
       timestamp: new Date().toISOString(),
     }));
 
-    res.status(200).json({ status: 'ok' }); // ✅ explicit
+    res.status(200).json({ status: 'ok' }); 
   });
 });
 
@@ -78,7 +78,7 @@ app.get('/orders', (req, res) => {
         timestamp: new Date().toISOString(),
       }));
 
-      return res.status(500).json({ error: err.message }); // ✅ handled here
+      return res.status(500).json({ error: err.message }); 
     }
 
     span.setStatus({ code: SpanStatusCode.OK });
