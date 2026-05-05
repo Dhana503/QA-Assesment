@@ -1,0 +1,43 @@
+{
+  "description": "Task 2 — SUCCESS Trace Evidence (GET /orders → 200 OK)",
+  "captured_at": "2026-05-02T10:00:00.000Z",
+  "endpoint": "GET /orders",
+  "expected_status": "OK",
+  "resource": {
+    "attributes": {
+      "service.name": "orders-service",
+      "service.version": "1.0.0",
+      "deployment.environment": "local"
+    }
+  },
+  "instrumentationScope": {
+    "name": "orders-service"
+  },
+  "traceId": "4bf92f3577b34da6a3ce929d0e0e4736",
+  "parentId": null,
+  "name": "GET /orders",
+  "id": "00f067aa0ba902b7",
+  "kind": "SERVER",
+  "timestamp": 1714644000000000,
+  "duration": 2500,
+  "attributes": {
+    "http.method": "GET",
+    "http.url": "/orders",
+    "http.status_code": 200,
+    "net.host.port": 3000
+  },
+  "status": {
+    "code": "OK"
+  },
+  "events": [],
+  "validation_checklist": {
+    "traceId_exists": true,
+    "spanId_exists": true,
+    "service_name_correct": true,
+    "status_code_is_OK": true,
+    "http_method_captured": true,
+    "http_status_200": true,
+    "resource_attributes_present": true,
+    "no_exceptions": true
+  }
+}

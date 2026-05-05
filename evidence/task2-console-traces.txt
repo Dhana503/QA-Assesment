@@ -1,0 +1,5 @@
+Γ£à OpenTelemetry SDK started ΓÇö service: orders-service
+≡ƒÜÇ Server running on http://localhost:3000
+{"level":"INFO","message":"Orders fetched successfully","trace_id":"753f0030a453e1a64f9f4d3d06f7b5da","span_id":"75fe61eb9979115b","timestamp":"2026-05-02T11:48:06.404Z"}
+{"level":"ERROR","message":"Simulated failure ΓÇö orders service unavailable","trace_id":"c2b1fff44b4f12bae3e05ed45a823fe4","span_id":"717e771757dc07b6","timestamp":"2026-05-02T11:48:27.023Z"}
+{"level":"INFO","message":"Orders fetched successfully","trace_id":"0c5cbe790ce9755afc62e9f9e7c1222e","span_id":"c4384838812391fe","timestamp":"2026-05-02T11:49:07.564Z"}

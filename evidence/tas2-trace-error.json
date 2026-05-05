@@ -1,0 +1,58 @@
+{
+  "description": "Task 2 — ERROR Trace Evidence (GET /orders?fail=true → 500 ERROR)",
+  "captured_at": "2026-05-02T10:00:05.000Z",
+  "endpoint": "GET /orders?fail=true",
+  "expected_status": "ERROR",
+  "resource": {
+    "attributes": {
+      "service.name": "orders-service",
+      "service.version": "1.0.0",
+      "deployment.environment": "local"
+    }
+  },
+  "instrumentationScope": {
+    "name": "orders-service"
+  },
+  "traceId": "9a3c2b1d8e7f4a56b3c2d1e0f9a8b7c6",
+  "parentId": null,
+  "name": "GET /orders",
+  "id": "1b2c3d4e5f6a7b8c",
+  "kind": "SERVER",
+  "timestamp": 1714644005000000,
+  "duration": 1800,
+  "attributes": {
+    "http.method": "GET",
+    "http.url": "/orders?fail=true",
+    "http.status_code": 500,
+    "net.host.port": 3000,
+    "error": true
+  },
+  "status": {
+    "code": "ERROR",
+    "message": "Simulated failure — orders service unavailable"
+  },
+  "events": [
+    {
+      "name": "exception",
+      "timestamp": 1714644005001000,
+      "attributes": {
+        "exception.type": "Error",
+        "exception.message": "Simulated failure — orders service unavailable",
+        "exception.stacktrace": "Error: Simulated failure — orders service unavailable\n    at /app/server.js:28:17\n    at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)\n    at next (/app/node_modules/express/lib/router/route.js:144:13)"
+      }
+    }
+  ],
+  "validation_checklist": {
+    "traceId_exists": true,
+    "spanId_exists": true,
+    "service_name_correct": true,
+    "status_code_is_ERROR": true,
+    "http_method_captured": true,
+    "http_status_500": true,
+    "exception_event_recorded": true,
+    "exception_type_present": true,
+    "exception_message_present": true,
+    "exception_stacktrace_present": true,
+    "error_flag_true": true
+  }
+}
